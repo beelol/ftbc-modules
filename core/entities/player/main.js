@@ -4,4 +4,4 @@ function tick () {
 }
 
 // This should happen only once
-printSomething("executed once in awake!");
+// printSomething("executed once in awake!");
