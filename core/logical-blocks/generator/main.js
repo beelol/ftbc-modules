@@ -4,10 +4,14 @@
 // so that the actor does not access the global mainObject
 // which would then be overriden
 mainObject = {
+  awake : function () {
+    this.energy = 0;
+  },
   tick : function () {
-    printSomething("Loaded the generator logical block in the core module.");
+    var energy = this.energy;
+    this.energy += 1;
   },
   activate : function () {
-    printSomething("you activated me!");
+    print("you activated me!");
   }
 };
