@@ -1,20 +1,29 @@
-// main object gets loaded and stored,
-// then it is converted to an object with a name based on
-// the actor and its id
-// so that the actor does not access the global mainObject
-// which would then be overriden
 mainObject = {
+  name: "Generator",
+  durability: 100,
+  description: "A basic generator.",
+
   awake : function () {
-    print("You just woke up a generator.");
+    this.energy = 100;
   },
+
   tick : function () {
+    this.chargeAdjacentBattery ();
   },
+
   activate : function () {
     print("you activated me!");
+  },
+
+  chargeAdjacentBattery : function () {
+    // Let's assume the output is the back
+    var outputBlock = this.getAdjacentBlock("backward");
+
+    if (outputBlock !== undefined && outputBlock.energy !== undefined) {
+      if(this.energy > 0) {
+        this.energy -= 1;
+        outputBlock.energy += 1;
+      }
+    }
   }
 };
-
-
-// end goal is make that ^ associated with an actor when the actor is spawned.
-
-// To do that, we need a LogicalBlockData id

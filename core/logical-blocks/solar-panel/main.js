@@ -5,14 +5,13 @@
 // which would then be overriden
 mainObject = {
   awake : function () {
-    print("You just woke up a solar panel.");
     this.energy = 0;
   },
   tick : function () {
     this.energy += 1;
   },
   activate : function () {
-    print("you activated me!");
+    // print("you activated me!");
   }
 };
 

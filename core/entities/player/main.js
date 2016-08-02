@@ -1,6 +1,12 @@
-// Tick happens every update frame
-function tick () {
-  // setPos(1, 1, 1);
-}
+mainObject = {
+  awake : function () {
+    print("heeeeeeeee's back.");
+  },
 
-// This should happen only once
+  tick : function () {
+  },
+
+  activate : function () {
+
+  }
+};
