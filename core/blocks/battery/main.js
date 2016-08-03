@@ -2,9 +2,9 @@ mainObject = {
   name: "Battery",
   durability: 150,
   description: "This stores energy. Such wow!",
+  logical: true,
 
   awake : function () {
-    print("battery activated!");
     this.energy = 0;
   },
 

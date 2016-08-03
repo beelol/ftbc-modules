@@ -4,6 +4,11 @@
 // so that the actor does not access the global mainObject
 // which would then be overriden
 mainObject = {
+  name: "SolarPanel",
+  durability: 100,
+  description: "A basic generator.",
+  logical: true,
+
   awake : function () {
     this.energy = 0;
   },

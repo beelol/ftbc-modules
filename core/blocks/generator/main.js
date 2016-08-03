@@ -2,17 +2,18 @@ mainObject = {
   name: "Generator",
   durability: 100,
   description: "A basic generator.",
+  logical: true,
 
   awake : function () {
     this.energy = 100;
   },
 
   tick : function () {
-    this.chargeAdjacentBattery ();
+    this.chargeAdjacentBattery();
   },
 
   activate : function () {
-    print("you activated me!");
+    // print("activate generator");
   },
 
   chargeAdjacentBattery : function () {
